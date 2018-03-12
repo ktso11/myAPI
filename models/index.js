@@ -1,4 +1,3 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/book-app");
-
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/myAPI-app" );
 mongoose.Promise = global.Promise;
